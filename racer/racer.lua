@@ -1,25 +1,31 @@
---This script will attempt to run X number of Sagolii Road Chocobo Races.
---It will use Super Sprint at the start of the race, then hug the left-side of the track.
---It will then use any race items and Choco Cure III, every 5 seconds, until the end of the race.
---See (https://exd.camora.dev/sheet/ChocoboRaceAbility) for a full list of Chocobo Race Abilities.
+--[[SND Metadata]]
+author: blcele
+version: 1.0.1
+description:
+This script will attempt to run X number of Sagolii Road Chocobo Races.
+It will use Super Sprint at the start of the race, then hug the left-side of the track.
+It will then use any race items and Choco Cure III, every 5 seconds, until the end of the race.
+See (https://exd.camora.dev/sheet/ChocoboRaceAbility) for a full list of Chocobo Race Abilities.
 
---The idea of this script is to make it slightly more successful at winning races rather than just
---using other plugins that simply queue for 20 races.
---It's not going to win every race.
+The idea of this script is to make it slightly more successful at winning races rather than just
+using other plugins that simply queue for 20 races.
+It's not going to win every race.
 
---We are assuming your chocobo knows Super Sprint and Choco Cure III.
---If your chocobo uses other abilities then tweak it for your needs.
+We are assuming your chocobo knows Super Sprint and Choco Cure III.
+If your chocobo uses other abilities then tweak it for your needs.
 
---This script relies on the plugin YesAlready to exit the dialog at the end of the race to return.
---'YesAlready' > 'Bothers' > 'Minigames and Special Events' > 'RaceChocoboResult'
---'YesAlready' Repo (https://github.com/PunishXIV/YesAlready)
+To Do:
+Add in checks to end the script if the user cancels the queue.
+Add in checks to see if we have an item before trying to use all items.
 
---To Do:
----Add in checks to end the script if the user cancels the queue.
----Add in checks to see if we have an item before trying to use all items.
+Requirements:
+This script relies on the plugin YesAlready to exit the dialog at the end of the race to return.
+'YesAlready' > 'Bothers' > 'Minigames and Special Events' > 'RaceChocoboResult'
+
+plugin_dependencies: YesAlready
+--[[End Metadata]]
 
 yield("/echo Chocobo Racing Script Starting...")
-
 
 racenum = 0
 NumOfRaces = 20 --Change this if you want to do less than 20.
